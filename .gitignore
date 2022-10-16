@@ -7,3 +7,8 @@ tmp/
 *.egg
 build
 htmlcov
+
+.pio
+.clang_complete
+.ccls
+.ccls-cache
