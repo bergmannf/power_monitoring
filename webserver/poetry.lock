@@ -1,4 +1,89 @@
 [[package]]
+name = "astor"
+version = "0.8.1"
+description = "Read/rewrite/write Python ASTs"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
+
+[[package]]
+name = "attrdict"
+version = "2.0.1"
+description = "A dict with attribute-style access"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+six = "*"
+
+[[package]]
+name = "babel"
+version = "2.11.0"
+description = "Internationalization utilities"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+pytz = ">=2015.7"
+
+[[package]]
+name = "bce-python-sdk"
+version = "0.8.74"
+description = "BCE SDK for python"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, <4"
+
+[package.dependencies]
+future = ">=0.6.0"
+pycryptodome = ">=3.8.0"
+six = ">=1.4.0"
+
+[[package]]
+name = "beautifulsoup4"
+version = "4.11.1"
+description = "Screen-scraping library"
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
+
+[package.dependencies]
+soupsieve = ">1.2"
+
+[package.extras]
+html5lib = ["html5lib"]
+lxml = ["lxml"]
+
+[[package]]
+name = "cachetools"
+version = "5.2.0"
+description = "Extensible memoizing collections and decorators"
+category = "main"
+optional = false
+python-versions = "~=3.7"
+
+[[package]]
+name = "certifi"
+version = "2022.9.24"
+description = "Python package for providing Mozilla's CA Bundle."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "charset-normalizer"
+version = "2.1.1"
+description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
+
+[package.extras]
+unicode_backport = ["unicodedata2"]
+
+[[package]]
 name = "click"
 version = "8.1.3"
 description = "Composable command line interface toolkit"
@@ -18,6 +103,99 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
+name = "contourpy"
+version = "1.0.6"
+description = "Python library for calculating contours of 2D quadrilateral grids"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+numpy = ">=1.16"
+
+[package.extras]
+bokeh = ["bokeh", "selenium"]
+docs = ["docutils (<0.18)", "sphinx (<=5.2.0)", "sphinx-rtd-theme"]
+test = ["pytest", "matplotlib", "pillow", "flake8", "isort"]
+test-minimal = ["pytest"]
+test-no-codebase = ["pytest", "matplotlib", "pillow"]
+
+[[package]]
+name = "cssselect"
+version = "1.2.0"
+description = "cssselect parses CSS3 Selectors and translates them to XPath 1.0"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "cssutils"
+version = "2.6.0"
+description = "A CSS Cascading Style Sheets library for Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["sphinx", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "jaraco.tidelift (>=1.4)"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 (<5)", "pytest-cov", "pytest-enabler (>=1.3)", "cssselect", "jaraco.test (>=5.1)", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "lxml", "importlib-resources"]
+
+[[package]]
+name = "cycler"
+version = "0.11.0"
+description = "Composable style cycles"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "cython"
+version = "0.29.32"
+description = "The Cython compiler for writing C extensions for the Python language."
+category = "main"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
+name = "decorator"
+version = "5.1.1"
+description = "Decorators for Humans"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "dill"
+version = "0.3.6"
+description = "serialize all of python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+graph = ["objgraph (>=1.7.2)"]
+
+[[package]]
+name = "et-xmlfile"
+version = "1.1.0"
+description = "An implementation of lxml.xmlfile for the standard library"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "fire"
+version = "0.4.0"
+description = "A library for automatically generating command line interfaces."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+six = "*"
+termcolor = "*"
+
+[[package]]
 name = "flask"
 version = "2.2.2"
 description = "A simple framework for building complex web applications."
@@ -34,6 +212,109 @@ Werkzeug = ">=2.2.2"
 [package.extras]
 async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
+
+[[package]]
+name = "flask-babel"
+version = "2.0.0"
+description = "Adds i18n/l10n support to Flask applications"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Babel = ">=2.3"
+Flask = "*"
+Jinja2 = ">=2.5"
+pytz = "*"
+
+[package.extras]
+dev = ["pytest", "pytest-mock", "bumpversion", "ghp-import", "sphinx", "pallets-sphinx-themes"]
+
+[[package]]
+name = "fonttools"
+version = "4.38.0"
+description = "Tools to manipulate font files"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+all = ["fs (>=2.2.0,<3)", "lxml (>=4.0,<5)", "zopfli (>=0.1.4)", "lz4 (>=1.7.4.2)", "matplotlib", "sympy", "skia-pathops (>=0.5.0)", "uharfbuzz (>=0.23.0)", "brotlicffi (>=0.8.0)", "scipy", "brotli (>=1.0.1)", "munkres", "unicodedata2 (>=14.0.0)", "xattr"]
+graphite = ["lz4 (>=1.7.4.2)"]
+interpolatable = ["scipy", "munkres"]
+lxml = ["lxml (>=4.0,<5)"]
+pathops = ["skia-pathops (>=0.5.0)"]
+plot = ["matplotlib"]
+repacker = ["uharfbuzz (>=0.23.0)"]
+symfont = ["sympy"]
+type1 = ["xattr"]
+ufo = ["fs (>=2.2.0,<3)"]
+unicode = ["unicodedata2 (>=14.0.0)"]
+woff = ["zopfli (>=0.1.4)", "brotlicffi (>=0.8.0)", "brotli (>=1.0.1)"]
+
+[[package]]
+name = "future"
+version = "0.18.2"
+description = "Clean single-source support for Python 3 and 2"
+category = "main"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
+name = "idna"
+version = "3.4"
+description = "Internationalized Domain Names in Applications (IDNA)"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "imageio"
+version = "2.22.3"
+description = "Library for reading and writing a wide range of image, video, scientific, and volumetric data formats."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+numpy = "*"
+pillow = ">=8.3.2"
+
+[package.extras]
+all-plugins = ["astropy", "av (!=10.0.0)", "imageio-ffmpeg", "opencv-python", "psutil", "tifffile"]
+all-plugins-pypy = ["av (!=10.0.0)", "imageio-ffmpeg", "psutil", "tifffile"]
+build = ["wheel"]
+dev = ["invoke", "pytest", "pytest-cov", "fsspec", "black", "flake8"]
+docs = ["sphinx", "numpydoc", "pydata-sphinx-theme"]
+ffmpeg = ["imageio-ffmpeg", "psutil"]
+fits = ["astropy"]
+full = ["astropy", "av (!=10.0.0)", "black", "flake8", "fsspec", "gdal", "imageio-ffmpeg", "invoke", "itk", "numpydoc", "opencv-python", "psutil", "pydata-sphinx-theme", "pytest", "pytest-cov", "sphinx", "tifffile", "wheel"]
+gdal = ["gdal"]
+itk = ["itk"]
+linting = ["black", "flake8"]
+opencv = ["opencv-python"]
+pyav = ["av (!=10.0.0)"]
+test = ["invoke", "pytest", "pytest-cov", "fsspec"]
+tifffile = ["tifffile"]
+
+[[package]]
+name = "imgaug"
+version = "0.4.0"
+description = "Image augmentation library for deep neural networks"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+imageio = "*"
+matplotlib = "*"
+numpy = ">=1.15"
+opencv-python = "*"
+Pillow = "*"
+scikit-image = ">=0.14.2"
+scipy = "*"
+Shapely = "*"
+six = "*"
 
 [[package]]
 name = "itsdangerous"
@@ -58,12 +339,597 @@ MarkupSafe = ">=2.0"
 i18n = ["Babel (>=2.7)"]
 
 [[package]]
+name = "kiwisolver"
+version = "1.4.4"
+description = "A fast implementation of the Cassowary constraint solver"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "lanms-neo"
+version = "1.0.2"
+description = "Standalone Locality-Aware NMS module."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "lmdb"
+version = "1.3.0"
+description = "Universal Python binding for the LMDB 'Lightning' Database"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "lxml"
+version = "4.9.1"
+description = "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, != 3.4.*"
+
+[package.extras]
+cssselect = ["cssselect (>=0.7)"]
+html5 = ["html5lib"]
+htmlsoup = ["beautifulsoup4"]
+source = ["Cython (>=0.29.7)"]
+
+[[package]]
 name = "markupsafe"
 version = "2.1.1"
 description = "Safely add untrusted strings to HTML/XML markup."
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[[package]]
+name = "matplotlib"
+version = "3.6.2"
+description = "Python plotting package"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+contourpy = ">=1.0.1"
+cycler = ">=0.10"
+fonttools = ">=4.22.0"
+kiwisolver = ">=1.0.1"
+numpy = ">=1.19"
+packaging = ">=20.0"
+pillow = ">=6.2.0"
+pyparsing = ">=2.2.1"
+python-dateutil = ">=2.7"
+setuptools_scm = ">=7"
+
+[[package]]
+name = "multiprocess"
+version = "0.70.14"
+description = "better multiprocessing and multithreading in python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+dill = ">=0.3.6"
+
+[[package]]
+name = "networkx"
+version = "2.8.8"
+description = "Python package for creating and manipulating graphs and networks"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+default = ["numpy (>=1.19)", "scipy (>=1.8)", "matplotlib (>=3.4)", "pandas (>=1.3)"]
+developer = ["pre-commit (>=2.20)", "mypy (>=0.982)"]
+doc = ["sphinx (>=5.2)", "pydata-sphinx-theme (>=0.11)", "sphinx-gallery (>=0.11)", "numpydoc (>=1.5)", "pillow (>=9.2)", "nb2plots (>=0.6)", "texext (>=0.6.6)"]
+extra = ["lxml (>=4.6)", "pygraphviz (>=1.9)", "pydot (>=1.4.2)", "sympy (>=1.10)"]
+test = ["pytest (>=7.2)", "pytest-cov (>=4.0)", "codecov (>=2.1)"]
+
+[[package]]
+name = "numpy"
+version = "1.23.4"
+description = "NumPy is the fundamental package for array computing with Python."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "opencv-contrib-python"
+version = "4.6.0.66"
+description = "Wrapper package for OpenCV python bindings."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+numpy = [
+    {version = ">=1.21.2", markers = "python_version >= \"3.10\" or python_version >= \"3.6\" and platform_system == \"Darwin\" and platform_machine == \"arm64\""},
+    {version = ">=1.19.3", markers = "python_version >= \"3.6\" and platform_system == \"Linux\" and platform_machine == \"aarch64\" or python_version >= \"3.9\""},
+    {version = ">=1.14.5", markers = "python_version >= \"3.7\""},
+    {version = ">=1.17.3", markers = "python_version >= \"3.8\""},
+]
+
+[[package]]
+name = "opencv-python"
+version = "4.6.0.66"
+description = "Wrapper package for OpenCV python bindings."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+numpy = [
+    {version = ">=1.21.2", markers = "python_version >= \"3.10\" or python_version >= \"3.6\" and platform_system == \"Darwin\" and platform_machine == \"arm64\""},
+    {version = ">=1.19.3", markers = "python_version >= \"3.6\" and platform_system == \"Linux\" and platform_machine == \"aarch64\" or python_version >= \"3.9\""},
+    {version = ">=1.14.5", markers = "python_version >= \"3.7\""},
+    {version = ">=1.17.3", markers = "python_version >= \"3.8\""},
+]
+
+[[package]]
+name = "openpyxl"
+version = "3.0.10"
+description = "A Python library to read/write Excel 2010 xlsx/xlsm files"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+et-xmlfile = "*"
+
+[[package]]
+name = "opt-einsum"
+version = "3.3.0"
+description = "Optimizing numpys einsum function"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+numpy = ">=1.7"
+
+[package.extras]
+docs = ["sphinx (==1.2.3)", "sphinxcontrib-napoleon", "sphinx-rtd-theme", "numpydoc"]
+tests = ["pytest", "pytest-cov", "pytest-pep8"]
+
+[[package]]
+name = "packaging"
+version = "21.3"
+description = "Core utilities for Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
+
+[[package]]
+name = "paddle-bfloat"
+version = "0.1.7"
+description = "Paddle numpy bfloat16 package"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "paddleocr"
+version = "2.6.1.0"
+description = "Awesome OCR toolkits based on PaddlePaddle （8.6M ultra-lightweight pre-trained model, support training and deployment among server, mobile, embeded and IoT devices"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+attrdict = "*"
+beautifulsoup4 = "*"
+cython = "*"
+fire = ">=0.3.0"
+fonttools = ">=4.24.0"
+imgaug = "*"
+lanms-neo = "1.0.2"
+lmdb = "*"
+lxml = "*"
+numpy = "*"
+opencv-contrib-python = "*"
+opencv-python = "*"
+openpyxl = "*"
+pdf2docx = "*"
+Polygon3 = "*"
+premailer = "*"
+pyclipper = "*"
+PyMuPDF = "1.19.0"
+python-docx = "*"
+rapidfuzz = "*"
+scikit-image = "*"
+shapely = "*"
+tqdm = "*"
+visualdl = "*"
+
+[[package]]
+name = "paddlepaddle"
+version = "2.3.2"
+description = "Parallel Distributed Deep Learning"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+astor = "*"
+decorator = "*"
+numpy = ">=1.13"
+opt-einsum = "3.3.0"
+paddle-bfloat = "0.1.7"
+Pillow = "*"
+protobuf = ">=3.1.0,<=3.20.0"
+requests = ">=2.20.0"
+six = "*"
+
+[[package]]
+name = "pandas"
+version = "1.5.1"
+description = "Powerful data structures for data analysis, time series, and statistics"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+numpy = {version = ">=1.21.0", markers = "python_version >= \"3.10\""}
+python-dateutil = ">=2.8.1"
+pytz = ">=2020.1"
+
+[package.extras]
+test = ["hypothesis (>=5.5.3)", "pytest (>=6.0)", "pytest-xdist (>=1.31)"]
+
+[[package]]
+name = "pdf2docx"
+version = "0.5.6"
+description = "Open source Python library converting pdf to docx."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+fire = ">=0.3.0"
+fonttools = ">=4.24.0"
+numpy = ">=1.17.2"
+opencv-python = ">=4.5"
+PyMuPDF = ">=1.19.0"
+python-docx = ">=0.8.10"
+
+[[package]]
+name = "pillow"
+version = "9.3.0"
+description = "Python Imaging Library (Fork)"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-issues (>=3.0.1)", "sphinx-removed-in", "sphinxext-opengraph"]
+tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
+
+[[package]]
+name = "polygon3"
+version = "3.0.9.1"
+description = "Polygon3 is a Python-3 package that handles polygonal shapes in 2D"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "premailer"
+version = "3.10.0"
+description = "Turns CSS blocks into style attributes"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+cachetools = "*"
+cssselect = "*"
+cssutils = "*"
+lxml = "*"
+requests = "*"
+
+[package.extras]
+dev = ["therapist", "tox", "twine", "black", "flake8", "wheel"]
+test = ["nose", "mock"]
+
+[[package]]
+name = "protobuf"
+version = "3.20.0"
+description = "Protocol Buffers"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "pyclipper"
+version = "1.3.0.post3"
+description = "Cython wrapper for the C++ translation of the Angus Johnson's Clipper library (ver. 6.4.2)"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "pycryptodome"
+version = "3.15.0"
+description = "Cryptographic library for Python"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
+name = "pymupdf"
+version = "1.19.0"
+description = "Python bindings for the PDF toolkit and renderer MuPDF"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "pyparsing"
+version = "3.0.9"
+description = "pyparsing module - Classes and methods to define and execute parsing grammars"
+category = "main"
+optional = false
+python-versions = ">=3.6.8"
+
+[package.extras]
+diagrams = ["railroad-diagrams", "jinja2"]
+
+[[package]]
+name = "python-dateutil"
+version = "2.8.2"
+description = "Extensions to the standard Python datetime module"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
+
+[package.dependencies]
+six = ">=1.5"
+
+[[package]]
+name = "python-docx"
+version = "0.8.11"
+description = "Create and update Microsoft Word .docx files."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+lxml = ">=2.3.2"
+
+[[package]]
+name = "pytz"
+version = "2022.6"
+description = "World timezone definitions, modern and historical"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "pywavelets"
+version = "1.4.1"
+description = "PyWavelets, wavelet transform module"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+numpy = ">=1.17.3"
+
+[[package]]
+name = "rapidfuzz"
+version = "2.13.2"
+description = "rapid fuzzy string matching"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+full = ["numpy"]
+
+[[package]]
+name = "requests"
+version = "2.28.1"
+description = "Python HTTP for Humans."
+category = "main"
+optional = false
+python-versions = ">=3.7, <4"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+charset-normalizer = ">=2,<3"
+idna = ">=2.5,<4"
+urllib3 = ">=1.21.1,<1.27"
+
+[package.extras]
+socks = ["PySocks (>=1.5.6,!=1.5.7)"]
+use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
+
+[[package]]
+name = "scikit-image"
+version = "0.19.3"
+description = "Image processing in Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+imageio = ">=2.4.1"
+networkx = ">=2.2"
+numpy = ">=1.17.0"
+packaging = ">=20.0"
+pillow = ">=6.1.0,<7.1.0 || >7.1.0,<7.1.1 || >7.1.1,<8.3.0 || >8.3.0"
+PyWavelets = ">=1.1.1"
+scipy = ">=1.4.1"
+tifffile = ">=2019.7.26"
+
+[package.extras]
+data = ["pooch (>=1.3.0)"]
+docs = ["sphinx (>=1.8)", "sphinx-gallery (>=0.10.1)", "numpydoc (>=1.0)", "sphinx-copybutton", "pytest-runner", "scikit-learn", "matplotlib (>=3.3)", "dask[array] (>=0.15.0,!=2.17.0)", "cloudpickle (>=0.2.1)", "pandas (>=0.23.0)", "seaborn (>=0.7.1)", "pooch (>=1.3.0)", "tifffile (>=2020.5.30)", "myst-parser", "ipywidgets", "plotly (>=4.14.0)", "kaleido"]
+optional = ["simpleitk", "astropy (>=3.1.2)", "cloudpickle (>=0.2.1)", "dask[array] (>=1.0.0,!=2.17.0)", "matplotlib (>=3.0.3)", "pooch (>=1.3.0)", "pyamg", "qtpy"]
+test = ["asv", "codecov", "flake8", "matplotlib (>=3.0.3)", "pooch (>=1.3.0)", "pytest (>=5.2.0)", "pytest-cov (>=2.7.0)", "pytest-localserver", "pytest-faulthandler"]
+
+[[package]]
+name = "scipy"
+version = "1.9.3"
+description = "Fundamental algorithms for scientific computing in Python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+numpy = ">=1.18.5,<1.26.0"
+
+[package.extras]
+test = ["pytest", "pytest-cov", "pytest-xdist", "asv", "mpmath", "gmpy2", "threadpoolctl", "scikit-umfpack"]
+doc = ["sphinx (!=4.1.0)", "pydata-sphinx-theme (==0.9.0)", "sphinx-panels (>=0.5.2)", "matplotlib (>2)", "numpydoc", "sphinx-tabs"]
+dev = ["mypy", "typing-extensions", "pycodestyle", "flake8"]
+
+[[package]]
+name = "setuptools-scm"
+version = "7.0.5"
+description = "the blessed package to manage your versions by scm tags"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+packaging = ">=20.0"
+tomli = ">=1.0.0"
+typing-extensions = "*"
+
+[package.extras]
+test = ["pytest (>=6.2)", "virtualenv (>20)"]
+toml = ["setuptools (>=42)"]
+
+[[package]]
+name = "shapely"
+version = "1.8.5.post1"
+description = "Geometric objects, predicates, and operations"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+all = ["pytest", "pytest-cov", "numpy"]
+test = ["pytest", "pytest-cov"]
+vectorized = ["numpy"]
+
+[[package]]
+name = "six"
+version = "1.16.0"
+description = "Python 2 and 3 compatibility utilities"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
+name = "soupsieve"
+version = "2.3.2.post1"
+description = "A modern CSS selector implementation for Beautiful Soup."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "termcolor"
+version = "2.1.0"
+description = "ANSI color formatting for output in terminal"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+tests = ["pytest", "pytest-cov"]
+
+[[package]]
+name = "tifffile"
+version = "2022.10.10"
+description = "Read and write TIFF files"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+numpy = ">=1.19.2"
+
+[package.extras]
+all = ["imagecodecs (>=2022.2.22)", "matplotlib (>=3.3)", "lxml", "zarr", "fsspec"]
+
+[[package]]
+name = "tomli"
+version = "2.0.1"
+description = "A lil' TOML parser"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "tqdm"
+version = "4.64.1"
+description = "Fast, Extensible Progress Meter"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+dev = ["py-make (>=0.1.0)", "twine", "wheel"]
+notebook = ["ipywidgets (>=6)"]
+slack = ["slack-sdk"]
+telegram = ["requests"]
+
+[[package]]
+name = "typing-extensions"
+version = "4.4.0"
+description = "Backported and Experimental Type Hints for Python 3.7+"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "urllib3"
+version = "1.26.12"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, <4"
+
+[package.extras]
+brotli = ["brotlicffi (>=0.8.0)", "brotli (>=1.0.9)", "brotlipy (>=0.6.0)"]
+secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "urllib3-secure-extra", "ipaddress"]
+socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
+
+[[package]]
+name = "visualdl"
+version = "2.4.1"
+description = "Visualize Deep Learning"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+bce-python-sdk = "*"
+flask = ">=1.1.1"
+Flask-Babel = ">=1.0.0"
+matplotlib = "*"
+multiprocess = "*"
+numpy = "*"
+packaging = "*"
+pandas = "*"
+Pillow = ">=7.0.0"
+protobuf = ">=3.11.0"
+requests = "*"
+six = ">=1.14.0"
 
 [[package]]
 name = "werkzeug"
@@ -82,13 +948,81 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "61c7943ff9f9922433780cd3ac588e35905564ec8f2273ea4b6b08f6a565fb97"
+content-hash = "9693df39b404b202c9f5fcb0c2b34d0d78afd58a63db52aca5cab157561cbc03"
 
 [metadata.files]
+astor = []
+attrdict = []
+babel = []
+bce-python-sdk = []
+beautifulsoup4 = []
+cachetools = []
+certifi = []
+charset-normalizer = []
 click = []
 colorama = []
+contourpy = []
+cssselect = []
+cssutils = []
+cycler = []
+cython = []
+decorator = []
+dill = []
+et-xmlfile = []
+fire = []
 flask = []
+flask-babel = []
+fonttools = []
+future = []
+idna = []
+imageio = []
+imgaug = []
 itsdangerous = []
 jinja2 = []
+kiwisolver = []
+lanms-neo = []
+lmdb = []
+lxml = []
 markupsafe = []
+matplotlib = []
+multiprocess = []
+networkx = []
+numpy = []
+opencv-contrib-python = []
+opencv-python = []
+openpyxl = []
+opt-einsum = []
+packaging = []
+paddle-bfloat = []
+paddleocr = []
+paddlepaddle = []
+pandas = []
+pdf2docx = []
+pillow = []
+polygon3 = []
+premailer = []
+protobuf = []
+pyclipper = []
+pycryptodome = []
+pymupdf = []
+pyparsing = []
+python-dateutil = []
+python-docx = []
+pytz = []
+pywavelets = []
+rapidfuzz = []
+requests = []
+scikit-image = []
+scipy = []
+setuptools-scm = []
+shapely = []
+six = []
+soupsieve = []
+termcolor = []
+tifffile = []
+tomli = []
+tqdm = []
+typing-extensions = []
+urllib3 = []
+visualdl = []
 werkzeug = []

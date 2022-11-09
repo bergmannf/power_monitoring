@@ -1,26 +1,39 @@
 #!/usr/bin/env python3
 import os
 import datetime
+import re
 from flask import Flask, request
 from paddleocr import PaddleOCR
 
 app = Flask(__name__)
 ocr = PaddleOCR(use_angle_cls=True, lang="en")
+consumption_regex = re.compile(r'\d{6,9}')
 
-def get_power_consumption(monitor: str, ocr_result: dict):
-    pass
+
+def get_power_consumption(monitor: str, ocr_result: list):
+    for line in ocr_result:
+        text = line[-1][0]
+        matches = consumption_regex.findall(text)
+        if matches:
+            return matches[0]
+    return ""
+
 
 def ocr(monitor: str, path: str, time: str):
     data_file = f"/data/{monitor}/data.csv"
     result = ocr.ocr(path)
-    power_meter = get_power_meter(monitor, result)
+    power_consumed = get_power_consumption(monitor, result)
+    if not power_consumed:
+        return
     with open(data_file, "a") as f:
-        line = f"{time}, {power_meter}"
+        line = f"{time}, {power_consumed}"
         f.write(line)
+
 
 @app.route("/", methods=["GET"])
 def index():
     return "Index page"
+
 
 @app.route("/store/<monitor>", methods=["POST"])
 def store_image(image):
