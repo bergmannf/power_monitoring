@@ -37,7 +37,7 @@ def index():
 
 @app.route("/store/<monitor>", methods=["POST"])
 def store_image(monitor):
-    now = datetime.now()
+    now = datetime.datetime.now()
     datestring = now.strftime("%Y-%m-%d_%H:%M:%S")
     base_path = f"/data/{monitor}/"
     os.makedirs(base_path, exist_ok=True)
