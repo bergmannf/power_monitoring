@@ -6,7 +6,7 @@ from flask import Flask, request
 from paddleocr import PaddleOCR
 
 app = Flask(__name__)
-ocr = PaddleOCR(use_angle_cls=True, lang="en")
+paddle = PaddleOCR(use_angle_cls=True, lang="en")
 consumption_regex = re.compile(r'\d{6,9}')
 
 
@@ -15,13 +15,15 @@ def get_power_consumption(monitor: str, ocr_result: list):
         text = line[-1][0]
         matches = consumption_regex.findall(text)
         if matches:
+            app.logger.info(f"Consumption found {matches[0]}")
             return matches[0]
     return ""
 
 
 def ocr(monitor: str, path: str, time: str):
+    app.logger.info(f"OCR for {monitor}: {path} at {time}")
     data_file = f"/data/{monitor}/data.csv"
-    result = ocr.ocr(path)
+    result = paddle.ocr(path)
     power_consumed = get_power_consumption(monitor, result)
     if not power_consumed:
         return
@@ -42,6 +44,7 @@ def store_image(monitor):
     base_path = f"/data/{monitor}/"
     os.makedirs(base_path, exist_ok=True)
     path = f"{base_path}{datestring}.jpg"
+    app.logger.info(f"Storing picture at {path}")
     with open(path, 'wb') as f:
         f.write(request.get_data())
         ocr(monitor, path, datestring)
