@@ -110,7 +110,7 @@ void setupWifi() {
 void setupLed() {
   ledcSetup(lampChannel, pwmfreq, pwmresolution); // configure LED PWM channel
   ledcAttachPin(LED_PIN, lampChannel); // attach the GPIO pin to the channel
-  int val = 25;
+  int val = 96;
   int brightness = round((pow(2, (1 + (val * 0.02))) - 2) / 6 * pwmMax);
   ledcWrite(lampChannel, brightness);
 }
