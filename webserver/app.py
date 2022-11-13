@@ -12,11 +12,12 @@ consumption_regex = re.compile(r'\d{6,9}')
 
 def get_power_consumption(monitor: str, ocr_result: list):
     for line in ocr_result:
-        text = line[-1][0]
-        matches = consumption_regex.findall(text)
-        if matches:
-            app.logger.info(f"Consumption found {matches[0]}")
-            return matches[0]
+        for result in line:
+            text = line[-1][0]
+            matches = consumption_regex.findall(text)
+            if matches:
+                app.logger.info(f"Consumption found {matches[0]}")
+                return matches[0]
     return ""
 
 

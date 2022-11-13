@@ -150,7 +150,7 @@ void setup() {
   Serial.print("Calling URL: ");
   Serial.println(httpAddress);
   http.begin(client, httpAddress);
-  http.addHeader("Content-Type", "multipart/form-data");
+  http.addHeader("Content-Type", "multipart/form-data;");
   int responseCode = http.POST(pic->buf, pic->len);
   Serial.print("HTTP Response code:");
   Serial.println(responseCode);
